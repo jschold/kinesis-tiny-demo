@@ -1,4 +1,6 @@
-from boto3 import kinesis
+import boto3
+
 
 def lambda_handler(event, context):
-    kinesis.put_record("terraform-kinesis-test", json.dumps("i am a message"), "partitionkey")
+    client = boto3.client('kinesis')
+    client.put_record("terraform-kinesis-test", json.dumps("i am a message"), "partitionkey")
