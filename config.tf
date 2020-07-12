@@ -15,7 +15,7 @@ resource "aws_kinesis_stream" "test_stream" {
 
 resource "aws_lambda_function" "process_lambda" {
   s3_bucket = "my-cigna-bucket"
-  s3_key    = "jenna-pipeline/SourceArti/3XwrsGn.zip"
+  s3_key    = "lambda.zip"
   function_name    = "process_lambda"
   handler          = "handlers/process_data.lambda_handler"
   runtime          = "python3.8"
@@ -25,7 +25,7 @@ resource "aws_lambda_function" "process_lambda" {
 
 resource "aws_lambda_function" "publish_lambda" {
   s3_bucket = "my-cigna-bucket"
-  s3_key    = "jenna-pipeline/SourceArti/3XwrsGn.zip"
+  s3_key    = "lambda.zip"
   function_name    = "publish_lambda"
   handler          = "handlers/publish_data.lambda_handler"
   runtime          = "python3.8"
