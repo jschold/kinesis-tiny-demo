@@ -35,7 +35,7 @@ resource "aws_lambda_function" "publish_lambda" {
 
 resource "aws_lambda_event_source_mapping" "cigna" {
   event_source_arn  = "${aws_kinesis_stream.test_stream.arn}"
-  function_name     = "${aws_lambda_function.publish_lambda.arn}"
+  function_name     = "${aws_lambda_function.process_lambda.arn}"
   starting_position = "LATEST"
 }
 
