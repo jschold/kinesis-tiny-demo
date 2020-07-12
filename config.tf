@@ -59,7 +59,7 @@ resource "aws_iam_role_policy" "kinesis_policy" {
           "Resource": [
               "arn:aws:kinesis:us-west-2:399394706053:stream/*"
           ]
-      },
+      }
   ]
 }
   EOF
