@@ -54,7 +54,7 @@ resource "aws_iam_role_policy" "kinesis_policy" {
               "kinesis:GetShardIterator",
               "kinesis:DescribeStream",
               "kinesis:ListStreams",
-              "kinesis:PutRecord"
+              "kinesis:PutRecord",
           ],
           "Resource": [
               "arn:aws:kinesis:us-west-2:399394706053:stream/*"
