@@ -91,28 +91,3 @@ resource "aws_iam_role" "lambda_exec_role" {
 }
 EOF
 }
-
-//resource "aws_iam_role_policy" "kinesis_policy" {
-//  name = "kinesis_policy"
-//  role = aws_iam_role.lambda_exec_role.id
-//
-//  policy = <<EOF
-//{
-//  "Version": "2012-10-17",
-//  "Statement": [
-//      {
-//          "Effect": "Allow",
-//          "Action": [
-//              "kinesis:GetRecords",
-//              "kinesis:GetShardIterator",
-//              "kinesis:DescribeStream",
-//              "kinesis:ListStreams"
-//          ],
-//          "Resource": [
-//              "arn:aws:kinesis:us-west-2:399394706053:stream/test_stream"
-//          ]
-//      }
-//  ]
-//}
-//  EOF
-//}
